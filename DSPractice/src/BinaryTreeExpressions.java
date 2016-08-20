@@ -29,17 +29,16 @@ class Node {
 	      return Integer.parseInt(n.val);
 	      
 	    } catch (NumberFormatException e) {
-	    	
 	        try {
 				return evaluateEx(eval(n.left), eval(n.right), n.val);
-			} catch (NotOperandExpression e1) {
+			} catch (NotOperatorExpression e1) {
 				System.out.println("Not a valid operand");
 				return 0;
 			}
 	    } 
 	  }
 	  
-	  public static int evaluateEx(int a, int b, String ex) throws NotOperandExpression {
+	  public static int evaluateEx(int a, int b, String ex) throws NotOperatorExpression {
 	    switch(ex) {
 	      case "+":
 	        return a + b;
@@ -50,7 +49,7 @@ class Node {
 	      case "*":
 	        return a * b;
 	      default:
-	        throw new NotOperandExpression(); // can choose to throw an error
+	        throw new NotOperatorExpression(); // can choose to throw an error
 	    }
 	  }
 }
