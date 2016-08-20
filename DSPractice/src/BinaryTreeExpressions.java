@@ -2,7 +2,7 @@
 public class BinaryTreeExpressions {
 
 	public static void main(String[] args) {
-		Node n1 = new Node("1");
+	    Node n1 = new Node("1");
 	    Node n2 = new Node("&");
 	    Node n3 = new Node("3");
 	    
@@ -27,7 +27,6 @@ class Node {
 	  public static int eval(Node n) {
 	    try {
 	      return Integer.parseInt(n.val);
-	      
 	    } catch (NumberFormatException e) {
 	        try {
 				return evaluateEx(eval(n.left), eval(n.right), n.val);
