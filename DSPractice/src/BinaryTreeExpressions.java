@@ -10,9 +10,7 @@ public class BinaryTreeExpressions {
 	    n2.right = n3;
 	    
 	    System.out.println(Node.eval(n2));
-
 	}
-
 }
 
 class Node {
